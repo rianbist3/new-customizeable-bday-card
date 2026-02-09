@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 16th Birthday Pranisha! 🎉</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            background: linear-gradient(135deg, #5a3d7a 0%, #7a4d9a 50%, #4a2d6a 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Card container */
+        .card {
+            background: linear-gradient(180deg, #fce4ec 0%, #ffd4e5 100%);
+            border-radius: 25px;
+            width: 100%;
+            max-width: 100vw;
+            min-height: 100vh;
+            position: relative;
+            overflow: visible;
+            border: 5px solid #e91e63;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .top-bar {
+            background: linear-gradient(90deg, #e91e63, #9c27b0, #e91e63);
+            height: 6px;
+            border-radius: 25px 25px 0 0;
+        }
+
+        .top-emoji {
+            display: none;
+        }
+
+        .card-content {
+            padding: 5px 10px 8px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2px;
+            position: relative;
+        }
+
+        .corner-flowers {
+            position: absolute;
+            font-size: 1.5em;
+        }
+
+        .corner-flowers.left {
+            top: -5px;
+            left: 5px;
+        }
+
+        .corner-flowers.right {
+            top: -5px;
+            right: 5px;
+        }
+
+        .main-title {
+            font-size: 1.55em;
+            font-weight: bold;
+            background: linear-gradient(90deg, #ff9800, #e91e63, #9c27b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0px;
+            line-height: 1.1;
+        }
+
+        .party-emoji {
+            font-size: 1.3em;
+        }
+
+        .name {
+            font-size: 2em;
+            color: #d81b60;
+            font-weight: bold;
+            margin: 0px 0;
+            font-family: cursive;
+            font-style: italic;
+        }
+
+        .nickname {
+            font-size: 1.25em;
+            color: #d81b60;
+            margin: 0px 0;
+            font-style: italic;
+        }
+
+        .age-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #e91e63, #d81b60);
+            color: white;
+            padding: 4px 18px;
+            border-radius: 50px;
+            font-size: 1.15em;
+            font-weight: bold;
+            margin: 1px 0 0px;
+            box-shadow: 0 6px 18px rgba(233, 30, 99, 0.4);
+        }
+
+        .cake-emojis {
+            font-size: 2.5em;
+            margin: 0px 0 2px;
+            animation: cakeShake 2s ease-in-out infinite;
+        }
+
+        @keyframes cakeShake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+
+        /* Photo section */
+        .photo-section {
+            display: flex;
+            gap: 6px;
+            justify-content: center;
+            margin: 3px 0;
+            padding: 0 5px;
+        }
+
+        .photo-frame {
+            position: relative;
+            width: 48%;
+            aspect-ratio: 1/1;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(233, 30, 99, 0.3);
+            border: 5px solid transparent;
+            background: linear-gradient(#ffd4e5, #ffd4e5) padding-box,
+                        linear-gradient(135deg, #ff1493, #e91e63, #ff1493) border-box;
+            animation: frameFloat 5s ease-in-out infinite;
+        }
+
+        .photo-frame:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .photo-frame:nth-child(2) {
+            animation-delay: 2.5s;
+        }
+
+        @keyframes frameFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 25px;
+        }
+
+        .heart-decoration {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 1.8em;
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+            animation: heartbeat 1.5s ease-in-out infinite;
+            z-index: 10;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.12); }
+        }
+
+        .messages-box {
+            background: linear-gradient(180deg, #ffc4dd 0%, #ffb3d9 100%);
+            border-radius: 20px;
+            padding: 8px 10px;
+            margin: 5px 0 4px;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .message {
+            margin: 4px 0;
+            color: #4a1942;
+            font-size: 0.92em;
+            line-height: 1.35;
+            text-align: left;
+        }
+
+        .message .emoji {
+            margin-right: 4px;
+        }
+
+        .quote-section {
+            text-align: center;
+            margin: 4px 0;
+            padding: 0 5px;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #d81b60;
+            font-size: 1.02em;
+            line-height: 1.3;
+        }
+
+        .celebrate-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            color: white;
+            padding: 9px 32px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 5px 0;
+            border: 3.5px solid #5e35b1;
+            box-shadow: 0 6px 18px rgba(94, 53, 177, 0.4);
+            cursor: pointer;
+            transition: transform 0.2s;
+            text-align: center;
+        }
+
+        .celebrate-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .celebrate-btn:active {
+            transform: scale(0.98);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .signature {
+            font-size: 1.5em;
+            color: #d81b60;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
+        .love-text {
+            color: #e91e63;
+            font-size: 1.05em;
+            font-weight: 600;
+        }
+
+        .bottom-left-decoration,
+        .bottom-right-decoration {
+            position: absolute;
+            font-size: 1.8em;
+        }
+
+        .bottom-left-decoration {
+            bottom: 5px;
+            left: 5px;
+        }
+
+        .bottom-right-decoration {
+            bottom: 5px;
+            right: 5px;
+        }
+
+        /* Side decorations - REMOVED */
+        .side-decoration {
+            display: none;
+        }
+
+        /* Balloon styles - exactly like the video */
+        .balloon {
+            position: fixed;
+            width: 100px;
+            height: 120px;
+            z-index: 9999;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .balloon-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .balloon-shape {
+            width: 100px;
+            height: 120px;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            position: relative;
+            box-shadow: inset -15px -25px 40px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.7;
+        }
+
+        .balloon-highlight {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            width: 25px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            filter: blur(3px);
+        }
+
+        .balloon-text {
+            color: white;
+            font-weight: bold;
+            font-size: 0.9em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .balloon-string {
+            width: 2px;
+            height: 80px;
+            background: linear-gradient(to bottom, rgba(100, 100, 100, 0.4), transparent);
+            margin-top: -5px;
+        }
+
+        /* Media Queries for different screen sizes */
+        @media (max-width: 768px) {
+            .card-content {
+                padding: 8px 12px 12px;
+            }
+
+            .main-title {
+                font-size: 1.4em;
+            }
+
+            .name {
+                font-size: 1.8em;
+            }
+
+            .nickname {
+                font-size: 1.15em;
+            }
+
+            .age-badge {
+                font-size: 1.05em;
+                padding: 6px 20px;
+            }
+
+            .cake-emojis {
+                font-size: 2.2em;
+            }
+
+            .messages-box {
+                padding: 10px 12px;
+            }
+
+            .message {
+                font-size: 0.88em;
+                line-height: 1.4;
+            }
+
+            .quote {
+                font-size: 0.96em;
+            }
+
+            .celebrate-btn {
+                font-size: 1.1em;
+                padding: 10px 32px;
+                border: 3px solid #5e35b1;
+            }
+
+            .signature {
+                font-size: 1.35em;
+            }
+
+            .love-text {
+                font-size: 0.98em;
+            }
+
+            .corner-flowers {
+                font-size: 1.3em;
+            }
+
+            .balloon {
+                width: 80px;
+                height: 100px;
+            }
+
+            .balloon-shape {
+                width: 80px;
+                height: 100px;
+            }
+
+            .balloon-text {
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .card-content {
+                padding: 6px 10px 10px;
+            }
+
+            .main-title {
+                font-size: 1.25em;
+            }
+
+            .name {
+                font-size: 1.65em;
+            }
+
+            .nickname {
+                font-size: 1.05em;
+            }
+
+            .age-badge {
+                font-size: 0.98em;
+                padding: 5px 18px;
+            }
+
+            .cake-emojis {
+                font-size: 2em;
+            }
+
+            .message {
+                font-size: 0.85em;
+            }
+
+            .quote {
+                font-size: 0.92em;
+            }
+
+            .celebrate-btn {
+                font-size: 1.05em;
+                padding: 9px 30px;
+            }
+
+            .balloon {
+                width: 70px;
+                height: 90px;
+            }
+
+            .balloon-shape {
+                width: 70px;
+                height: 90px;
+            }
+
+            .balloon-text {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+    
+    <div class="card">
+        <div class="top-emoji">🎂</div>
+        <div class="top-bar"></div>
+        <div class="side-decoration left">🎀</div>
+        <div class="side-decoration right">🎀</div>
+
+        <div class="card-content">
+            <div class="header">
+                <div class="corner-flowers left">🌸</div>
+                <div class="corner-flowers right">✨</div>
+                
+                <div class="main-title">
+                    <span class="party-emoji">🎉</span> Happy 16th Birthday <span class="party-emoji">🎉</span>
+                </div>
+                <div class="name">Pranisha Poudel</div>
+                <div class="nickname">Pari 😍</div>
+                <div class="age-badge">Turning 16 ⭐</div>
+                <div class="cake-emojis">🎂🕯️</div>
+            </div>
+
+            <div class="photo-section">
+                <div class="photo-frame">
+                    <img src="image1.jpg" alt="Pranisha Photo 1">
+                    <div class="heart-decoration">💕</div>
+                </div>
+                <div class="photo-frame">
+                    <img src="image2.jpg" alt="Pranisha Photo 2">
+                    <div class="heart-decoration">💕</div>
+                </div>
+            </div>
+
+            <div class="messages-box">
+                <div class="message">
+                    <span class="emoji">😍</span> To the most beautiful girl in my world, happy birthday my love! Every day with you is a celebration, but today is extra special.
+                </div>
+                <div class="message">
+                    <span class="emoji">🌹</span> Your smile is my favorite sight, your laugh is my favorite sound, and your happiness is my greatest joy.
+                </div>
+                <div class="message">
+                    <span class="emoji">✨</span> You're not just my girlfriend—you're my best friend, my inspiration, and my dream come true.
+                </div>
+                <div class="message">
+                    <span class="emoji">💖</span> May this year bring you endless happiness and all the love your heart can hold. I'm so lucky to have you!
+                </div>
+            </div>
+
+            <div class="quote-section">
+                <div class="quote">
+                    "You're the reason I believe in love at first sight, and every sight after that." 💕
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <div class="celebrate-btn" onclick="celebrate()">
+                    🎉 Celebrate! 🎊
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="signature">Forever Yours 💑</div>
+                <div class="love-text">❤️ With all my love ❤️</div>
+            </div>
+        </div>
+
+        <div class="bottom-left-decoration">💎</div>
+        <div class="bottom-right-decoration">✨</div>
+    </div>
+
+    <script>
+        function celebrate() {
+            // Play background music
+            const music = document.getElementById('bgMusic');
+            music.play();
+            
+            // Create balloons from bottom
+            for (let i = 0; i < 25; i++) {
+                setTimeout(() => createBalloon(), i * 120);
+            }
+            
+            // Create flower petals from top
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => createConfetti(), i * 60);
+            }
+        }
+
+        function createBalloon() {
+            const colors = [
+                '#FF1493', '#E91E63', '#C2185B', '#880E4F',  // Pinks
+                '#9C27B0', '#7B1FA2', '#6A1B9A',             // Purples
+                '#FF9800', '#F57C00', '#E65100',             // Oranges
+                '#FFC107', '#FFA000', '#FF6F00',             // Yellows
+                '#4CAF50', '#388E3C', '#2E7D32',             // Greens
+                '#2196F3', '#1976D2', '#0D47A1',             // Blues
+                '#00BCD4', '#0097A7', '#00838F',             // Cyans
+                '#F44336', '#D32F2F', '#C62828'              // Reds
+            ];
+
+            const balloon = document.createElement('div');
+            balloon.className = 'balloon';
+            
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            const startX = Math.random() * 90 + 5;
+            const endX = startX + (Math.random() * 40 - 20);
+            const duration = Math.random() * 3 + 5;
+            const delay = Math.random() * 0.5;
+            const rotation = Math.random() * 30 - 15;
+            
+            balloon.style.left = startX + 'vw';
+            balloon.style.bottom = '-150px';
+            
+            balloon.innerHTML = `
+                <div class="balloon-inner">
+                    <div class="balloon-shape" style="background: ${color};">
+                        <div class="balloon-highlight"></div>
+                        <div class="balloon-text">Happy<br>Birthday<br>dai</div>
+                    </div>
+                    <div class="balloon-string"></div>
+                </div>
+            `;
+            
+            document.body.appendChild(balloon);
+            
+            // Animate balloon flying up
+            setTimeout(() => {
+                balloon.style.transition = `all ${duration}s cubic-bezier(0.25, 0.46, 0.45, 0.94)`;
+                balloon.style.bottom = '110vh';
+                balloon.style.left = endX + 'vw';
+                balloon.style.transform = `rotate(${rotation}deg)`;
+            }, 100);
+            
+            // Remove balloon after animation
+            setTimeout(() => {
+                balloon.remove();
+            }, duration * 1000 + 500);
+        }
+
+        function createConfetti() {
+            const petal = document.createElement('div');
+            petal.style.position = 'fixed';
+            petal.style.left = Math.random() * 100 + 'vw';
+            petal.style.top = '-50px';
+            petal.style.fontSize = (Math.random() * 1.2 + 1.5) + 'em';
+            
+            // Flower petals emojis
+            const flowers = ['🌸', '🌺', '🌼', '🌻', '🌷', '💮', '🏵️', '🌹'];
+            petal.innerHTML = flowers[Math.floor(Math.random() * flowers.length)];
+            
+            petal.style.pointerEvents = 'none';
+            petal.style.zIndex = '9999';
+            petal.style.opacity = '0.9';
+            
+            const duration = Math.random() * 3 + 4;
+            const endX = parseFloat(petal.style.left) + (Math.random() * 60 - 30);
+            const rotation = Math.random() * 1080 - 540;
+            
+            petal.style.transition = `all ${duration}s cubic-bezier(0.25, 0.46, 0.45, 0.94)`;
+            
+            document.body.appendChild(petal);
+            
+            // Animate petal falling with swaying motion
+            setTimeout(() => {
+                petal.style.top = '110vh';
+                petal.style.left = endX + 'vw';
+                petal.style.transform = `rotate(${rotation}deg)`;
+                petal.style.opacity = '0.5';
+            }, 50);
+            
+            // Remove petal after animation
+            setTimeout(() => {
+                petal.remove();
+            }, duration * 1000 + 100);
+        }
+
+        // Auto-play animations on load (music plays on Celebrate button click)
+        window.addEventListener('load', () => {
+            setTimeout(celebrate, 1000);
+        });
+    </script>
+</body>
+</html>
